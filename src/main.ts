@@ -29,27 +29,25 @@ WA.onInit().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
 
+    WA.chat.sendChatMessage('Hello, I am Mr.Robot.', 'Mr Robot');
     WA.chat.onChatMessage(((message: string) => {
         if (id == 1){
-            // do something
-            WA.chat.sendChatMessage('Hello, I am Mr.Robot.', 'Mr Robot');
-            id ++;
-        } else {
-            if (id == 2){
-                WA.chat.sendChatMessage('Do you need a hint?', 'Mr Robot');
-                WA.chat.onChatMessage((message: string) => {
-                    if (message == 'y'){
-                        // print hint
-                        WA.chat.sendChatMessage('Hint 1', 'Mr Robot');
-                        hintLevel ++;
-                    } 
-                    else {
-                        if (message == 'n'){
-                            id++
-                        }
+            WA.chat.sendChatMessage('Do you need a hint?', 'Mr Robot');
+            WA.chat.onChatMessage((message: string) => {
+                if (message == 'y'){
+                    // print hint
+                    WA.chat.sendChatMessage('Hint 1', 'Mr Robot');
+                    hintLevel ++;
+                } 
+                else {
+                    if (message == 'n'){
+                        id++
                     }
-                })
-            }
+                } 
+            })
+        }
+        else {
+            if (id == 2){}
 
             if (id == 3){
                 WA.chat.sendChatMessage('Please enter the code.', 'Mr Robot');

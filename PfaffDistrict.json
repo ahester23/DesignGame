@@ -1047,13 +1047,13 @@
          "objects":[
                 {
                  "class":"",
-                 "height":37.53757380569,
+                 "height":75.03757380569,
                  "id":20,
                  "name":"clockPopup",
                  "rotation":0,
                  "visible":true,
-                 "width":51.138307389515,
-                 "x":1316.72714260154,
+                 "width":99.6383073895149,
+                 "x":1316.97714260154,
                  "y":1418.85847199857
                 }],
          "opacity":1,
@@ -1187,6 +1187,12 @@
  "nextlayerid":38,
  "nextobjectid":21,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"script",
+         "type":"string",
+         "value":"src\/main.ts"
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",
  "tileheight":32,

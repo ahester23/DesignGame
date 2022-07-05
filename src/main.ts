@@ -30,45 +30,146 @@ WA.onInit().then(() => {
     }).catch(e => console.error(e));
 
     WA.chat.sendChatMessage('Hello, I am Mr.Robot.', 'Mr Robot');
-    WA.chat.onChatMessage(((message: string) => {
-        if (id == 1){
-            WA.chat.sendChatMessage('Do you need a hint?', 'Mr Robot');
-            WA.chat.onChatMessage((message: string) => {
-                if (message == 'y'){
-                    // print hint
+    do{
+        WA.chat.onChatMessage((message: string) => {
+            if (id == 1){
+                 WA.chat.sendChatMessage('Do you need a hint?', 'Mr Robot');
+                 WA.chat.onChatMessage((message: string) => {
+                 console.log('The user typed a message', message);
+                    if (message == 'y'){
+                        id = 2
+                    } 
+                    else {
+                        id = 3
+                    }
+                 
+                })
+            }
+
+            else if (id == 2){
+                 // print hint
+                if(hintLevel == 1){
                     WA.chat.sendChatMessage('Hint 1', 'Mr Robot');
                     hintLevel ++;
-                } 
-                else {
+                    WA.chat.sendChatMessage('Do you need another hint?', 'Mr Robot');
+                    WA.chat.onChatMessage((message: string) => {
+                    console.log('The user typed a message', message);
                     if (message == 'n'){
-                        id++
-                    }
-                } 
-            })
-        }
-        else {
-            if (id == 2){}
+                        id = 3
+                        }
+                    })
+                    console.log('Hint 1 given.');
+                }
 
-            if (id == 3){
+                else if(hintLevel == 2){
+                    WA.chat.sendChatMessage('Hint 2', 'Mr Robot');
+                    hintLevel ++; 
+                    WA.chat.sendChatMessage('Do you need another hint?', 'Mr Robot');
+                    WA.chat.onChatMessage((message: string) => {
+                        console.log('The user typed a message', message);
+                        if (message == 'n'){
+                            id = 3
+                        }
+                    })
+                    console.log('Hint 2 given.');
+                }
+
+                else if (hintLevel == 3){
+                    WA.chat.sendChatMessage('Hint 3', 'Mr Robot');
+                    WA.chat.sendChatMessage('You are now out of hints.', 'Mr Robot');
+                    hintLevel ++;
+                    id = 3
+                    console.log('Hint 3 given.');
+                }
+
+                else{
+                    WA.chat.sendChatMessage('Here are your hints:', 'Mr Robot');
+                    WA.chat.sendChatMessage('Hint 1', 'Mr Robot');
+                    WA.chat.sendChatMessage('Hint 2', 'Mr Robot');
+                    WA.chat.sendChatMessage('Hint 3', 'Mr Robot');
+                    WA.chat.sendChatMessage('There are no other hints', 'Mr Robot');
+                    id = 3
+                    console.log('All hints reprinted. given.');
+                }
+            }
+
+            else if (id == 3){
+                WA.chat.sendChatMessage('Would you like to enter the code?', 'Mr Robot');
+                WA.chat.onChatMessage((message: string) => {
+                    console.log('The user typed a message', message);
+                    if (message == 'y'){
+                        id = 4
+                    }
+                    else{
+                        id = 5
+                    }
+                })
+            }
+
+            else if (id == 4){
                 WA.chat.sendChatMessage('Please enter the code.', 'Mr Robot');
                 WA.chat.onChatMessage((message: string) => {
+                    console.log('The user typed a message', message);
                     if (message == '1234'){
                         // print hint
                         WA.chat.sendChatMessage('You entered the right code!', 'Mr Robot');
                         WA.chat.sendChatMessage('The secret password is star. Goodbye.', 'Mr Robot');
-                        id ++;
+                        id = 5;
                     } 
-                    else {
-                        if (message != '1234'){
-                            WA.chat.sendChatMessage('You entered the wrong code!', 'Mr Robot'); 
-                            id = 1; 
-                        }
+
+                    else{
+                        WA.chat.sendChatMessage('You entered the wrong code! Would you like to try again?', 'Mr Robot'); 
                     }
                 })
             }
-        console.log('The user typed a message', message);
-        WA.chat.sendChatMessage('Hello world you wrote: ' + message, 'Mr Robot');
-    }}));
+
+            else if ( id == 5){
+                WA.chat.sendChatMessage('Do you need anymore help?', 'Mr Robot')
+                WA.chat.onChatMessage((message: string) => {
+                    if (message == 'n'){
+                        WA.chat.sendChatMessage('Okay, Goodbye!','Mr Robot')
+                    }
+
+                    else{
+                        id = 6
+                    }
+                })
+            }
+
+            else if (id == 6){
+                WA.chat.sendChatMessage('What can I help you with?', 'Mr Robot')
+                WA.chat.onChatMessage((message: string) => {
+                    if (message == 'hint') {
+                        id = 1
+                    }
+
+                    else if ( message == 'enter code'){
+                        id = 3
+                    }
+
+                    else{
+                        WA.chat.sendChatMessage('Okay, Goodbye!', 'Mr Robot')
+                    }
+                })
+            }
+
+            else if (id == 7){
+                WA.chat.sendChatMessage('Would you like to try again?', 'Mr Robot')
+                WA.chat.onChatMessage((message: string) => {
+                    console.log('The user typed a message', message);
+                    if (message == 'y'){
+                        id = 4
+                    }
+
+                    else{
+                        id = 1
+                    }
+                })
+            }
+
+        })
+            
+    }while(id <= 7);
 
 
 }).catch(e => console.error(e));

@@ -26,14 +26,23 @@ WA.onInit().then(() => {
 
     WA.chat.onChatMessage((message => {
         switch (message) {
-            case "help":
-                WA.chat.sendChatMessage('Do you need a hint? Just type hint x for x = 1,2,3', 'Mr Robot');
+            case "code":
+                WA.chat.sendChatMessage('Ok, you may enter your code now.', 'Mr Robot');
+                WA.chat.onChatMessage((message) => {
+                    switch(message){
+                        case "1234":
+                            WA.chat.sendChatMessage('You answered correctly. The passcode is star.', 'Mr. Robot')
+                            break
+                        default:
+                            WA.chat.sendChatMessage('You answered incorrectly. Better luck next time!')
+                    }
+                })
                 break;
-            case "hint 1":
+            case "hint":
                 WA.chat.sendChatMessage('Butterbrot 1', 'Mr Robot');
                 break;
             default: 
-                WA.chat.sendChatMessage('Butterbrot 2', 'Mr Robot');
+                WA.chat.sendChatMessage('Would you like a hint or to enter the code?', 'Mr Robot');
         } 
         }
     ));

@@ -38,36 +38,39 @@ WA.onInit().then(() => {
     console.log('Riddle introduced to user.')
     WA.chat.sendChatMessage(directions, 'Mr.Robot')
     console.log('Directions sent to user.')
-    WA.chat.sendChatMessage("How can I help you today?", 'Mr Robot');
+    WA.chat.sendChatMessage("How can I help you today?", 'Mr. Robot');
     console.log('Asked user what help they need.');
     WA.chat.onChatMessage((message => {
         console.log('User sent :', message);
-        switch (message) {
-            case 'help':
+        var testmessage = message.toLowerCase()
+        switch(true) {
+            case testmessage.includes('thank you'):
+                WA.chat.sendChatMessage("You are welcome.", "Mr. Robot")
+                break
+            case testmessage.includes('help'):
                 WA.chat.sendChatMessage('How can I help you?', 'Mr. Robot')
                 break
-            case 'instructions':
-                WA.chat.sendChatMessage(directions, 'Mr.Robot')
+            case testmessage.includes('instructions'):
+                WA.chat.sendChatMessage(directions, 'Mr. Robot')
                 break
-            case 'reprint':
-                WA.chat.sendChatMessage(hint1, 'Mr Robot');
-                WA.chat.sendChatMessage(hint2, 'Mr Robot');
-                WA.chat.sendChatMessage(hint3, 'Mr Robot');
+            case testmessage.includes('reprint'):
+                WA.chat.sendChatMessage(hint1, 'Mr. Robot');
+                WA.chat.sendChatMessage(hint2, 'Mr. Robot');
+                WA.chat.sendChatMessage(hint3, 'Mr. Robot');
                 console.log('All hints reprinted.')
                 break
 
-            case "none":
+            case testmessage.includes("none"):
                 console.log('User said they do not need help. Wait for next message.');
                 WA.chat.sendChatMessage('Okay, I am here if you need me!', 'Mr. Robot')
                 break
-            
-            case "code":
+            case testmessage.includes("code"):
                 console.log('User would like to enter code.');
                 WA.chat.sendChatMessage('Ok, you may enter your code now.', 'Mr. Robot');
                 console.log('Prompted user for code.');
                 break;
 
-            case "hint":
+            case testmessage.includes("hint"):
                 console.log('User asked for a hint.');
                 if (hintLevel == 1){
                     WA.chat.sendChatMessage('Here is your first hint:', 'Mr. Robot');
@@ -98,13 +101,11 @@ WA.onInit().then(() => {
  
             default: 
             if (isNaN(parseInt(message))){
-                // rightCode = false
                 console.log('User did not enter a code')
             }
             else{
                 console.log('User entered a code.')
                 if (parseInt(message) == 1234){
-                    console.log('Code is correct.')
                     console.log('Code is entered and correct.')
                     WA.chat.sendChatMessage('You answered the correct code. The passcode is star.', 'Mr. Robot')
                     console.log('Tell user code is correct');
@@ -118,7 +119,7 @@ WA.onInit().then(() => {
             }
             WA.chat.sendChatMessage(robotCom, 'Mr. Robot')
             break
-            }
+        }
 
     }))
 

@@ -14,8 +14,8 @@ var hint1 = 'hint1'
 var hint2 = 'hint2'
 var hint3 = 'hint3'
 var directions = 'directions'
-var introduction = 'Riddle Introduction'
-var robotIntro = 'Hello, bla bla bla. I do all these things.'
+var introduction = 'Welcome to the Pfaff district. '
+var robotIntro = 'Hello, I am Mr. Robot. I am here to assist you today. For each map, I can give you 3 hints.'
 var robotCom = 'Robot commands here.'
 
 // Waiting for the API to be ready

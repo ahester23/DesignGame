@@ -82,16 +82,6 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"autoClose",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"autoOpen",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
                  "name":"code",
                  "type":"string",
                  "value":"1764"
@@ -104,7 +94,7 @@
                 {
                  "name":"zone",
                  "type":"string",
-                 "value":"door"
+                 "value":"door_open_zone"
                 }],
          "type":"tilelayer",
          "visible":true,

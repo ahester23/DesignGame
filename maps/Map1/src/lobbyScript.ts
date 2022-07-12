@@ -7,7 +7,7 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
 
-let currentPopup = undefined;
+let currentPopup: any = undefined;
 
 // var id = 1
 var hint1 = 'hint1'

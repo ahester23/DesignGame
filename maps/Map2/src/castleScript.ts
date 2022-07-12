@@ -1,14 +1,10 @@
 console.log('hello world!')
-// import { ActionMessage } from "@workadventure/iframe-api-typings/Api/iframe/Ui/ActionMessage";
 /// <reference types="@workadventure/iframe-api-typings" />
 
 
 import  * as apiExtra from "@workadventure/scripting-api-extra";
 
-
-// import { getVariables, VariableDescriptor } from "@workadventure/scripting-api-extra";
-
-// import { callbackify } from "util";
+const defaultAssetsUrl = "https://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist";
 
 console.log('Script started successfully');
 
@@ -165,7 +161,7 @@ WA.onInit().then(() => {
     apiExtra.bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');}).then(() => {
     }).catch(e => console.error(e));
-    apiExtra.initDoors()
+    apiExtra.initDoors(defaultAssetsUrl)
     // WA.state.onVariableChange('door').subscribe((data: unknown) => {
     //     if(data === true){
     //         setTimeout(() => {

@@ -167,7 +167,13 @@ WA.onInit().then(() => {
         apiExtra.initDoors()
     }).catch(e => console.error(e));
     
-    
+    WA.state.onVariableChange('door_open_zone').subscribe((data: unknown) => {
+        if(data === true){
+            setTimeout(() => {
+                WA.state.saveVariable('gardenDoor', false);
+            }, 10000);
+        }
+    });
    
 }).catch(e => console.error(e));
    

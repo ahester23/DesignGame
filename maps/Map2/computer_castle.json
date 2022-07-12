@@ -330,11 +330,11 @@
                          "name":"closeLayer",
                          "type":"string",
                          "value":"closed_door"
-                        },
+                        }, 
                         {
-                           "name":"default",
-                           "type":"bool",
-                           "value":false
+                         "name":"default",
+                         "type":"bool",
+                         "value":false
                         }, 
                         {
                          "name":"door",
@@ -347,10 +347,10 @@
                          "value":"opened_door"
                         }, 
                         {
-                           "name":"persist",
-                           "type":"bool",
-                           "value":false
-                          }],
+                         "name":"persist",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "visible":true,
                  "width":0,
@@ -439,7 +439,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/castleScript.ts"
+         "value":"maps\/Map2\/src\/castleScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

@@ -11,7 +11,7 @@ import  * as apiExtra from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
 
-let currentPopup: any = undefined;
+let currentPopup = undefined;
 
 // var id = 1
 var hint1 = 'Look around for a place that could contain the time machine.'
@@ -167,7 +167,7 @@ WA.onInit().then(() => {
         apiExtra.initDoors()
     }).catch(e => console.error(e));
     
-    WA.state.onVariableChange('door_open_zone').subscribe((data: unknown) => {
+    WA.state.onVariableChange('door_open_zone').subscribe((data) => {
         if(data === true){
             setTimeout(() => {
                 WA.state.saveVariable('gardenDoor', false);

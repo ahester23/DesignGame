@@ -29,8 +29,4 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": [
-    "maps/Map1/src",
-    "maps/Map2/src"
-  ]
 }

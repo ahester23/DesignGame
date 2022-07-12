@@ -71,15 +71,41 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3321, 3321, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3321, 3321, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":10,
-         "id":10,
-         "name":"exitDoor",
+         "id":21,
+         "name":"door_open_zone",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"autoClose",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"autoOpen",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"code",
+                 "type":"string",
+                 "value":"1764"
+                }, 
+                {
+                 "name":"doorVariable",
+                 "type":"string",
+                 "value":"door"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"door"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":30,
@@ -306,7 +332,7 @@
                 {
                  "class":"variable",
                  "height":0,
-                 "id":7,
+                 "id":8,
                  "name":"door",
                  "point":true,
                  "properties":[
@@ -314,16 +340,6 @@
                          "name":"closeLayer",
                          "type":"string",
                          "value":"closed_door"
-                        }, 
-                        {
-                         "name":"code",
-                         "type":"string",
-                         "value":"1764"
-                        }, 
-                        {
-                         "name":"default",
-                         "type":"bool",
-                         "value":false
                         }, 
                         {
                          "name":"door",
@@ -334,12 +350,17 @@
                          "name":"openLayer",
                          "type":"string",
                          "value":"opened_door"
+                        }, 
+                        {
+                         "name":"readableBy",
+                         "type":"string",
+                         "value":""
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":800.75,
-                 "y":88.25
+                 "x":807.25,
+                 "y":198.75
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -380,8 +401,8 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":10,
-         "id":18,
-         "name":"closed_door",
+         "id":19,
+         "name":"opened_door",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -393,31 +414,37 @@
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3225, 3226, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3257, 3258, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3289, 3290, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3318, 3318, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3318, 3318, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3318, 3318, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":10,
-         "id":19,
-         "name":"opened_door",
+         "id":18,
+         "name":"closed_door",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":30,
          "x":0,
          "y":0
         }],
- "nextlayerid":20,
- "nextobjectid":8,
+ "nextlayerid":22,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "properties":[
         {
          "name":"script",
          "type":"string",
-         "value":"src\/castleScript.ts"
+         "value":"src2\/castleScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",
@@ -426,11 +453,11 @@
         {
          "columns":16,
          "firstgid":1,
-         "image":"tilesets\/tilesets_deviant_milkian_1.png",
+         "image":"..\/..\/tilesets\/tilesets_deviant_milkian_1.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
-         "name":"tilesets_deviant_milkian_1",
+         "name":"..\/..\/tilesets_deviant_milkian_1",
          "spacing":0,
          "tilecount":256,
          "tileheight":32,
@@ -439,7 +466,7 @@
         {
          "columns":16,
          "firstgid":257,
-         "image":"tilesets\/general.png",
+         "image":"..\/..\/tilesets\/general.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
@@ -452,7 +479,7 @@
         {
          "columns":16,
          "firstgid":513,
-         "image":"tilesets\/request_april_by_nicnubill_d7dvydh.png",
+         "image":"..\/..\/tilesets\/request_april_by_nicnubill_d7dvydh.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
@@ -465,7 +492,7 @@
         {
          "columns":12,
          "firstgid":769,
-         "image":"tilesets\/sol_interieur.png",
+         "image":"..\/..\/tilesets\/sol_interieur.png",
          "imageheight":288,
          "imagewidth":384,
          "margin":0,
@@ -478,7 +505,7 @@
         {
          "columns":17,
          "firstgid":877,
-         "image":"tilesets\/flooring.png",
+         "image":"..\/..\/tilesets\/flooring.png",
          "imageheight":736,
          "imagewidth":544,
          "margin":0,
@@ -491,7 +518,7 @@
         {
          "columns":32,
          "firstgid":1268,
-         "image":"tilesets\/Terrain_and_Outside.png",
+         "image":"..\/..\/tilesets\/Terrain_and_Outside.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -504,7 +531,7 @@
         {
          "columns":32,
          "firstgid":2292,
-         "image":"tilesets\/build_atlas.png",
+         "image":"..\/..\/tilesets\/build_atlas.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,
@@ -517,7 +544,7 @@
         {
          "columns":6,
          "firstgid":3316,
-         "image":"tilesets\/WA_Special_Zones.png",
+         "image":"..\/..\/tilesets\/WA_Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
@@ -549,7 +576,7 @@
         {
          "columns":16,
          "firstgid":3328,
-         "image":"tilesets\/plants.png",
+         "image":"..\/..\/tilesets\/plants.png",
          "imageheight":1024,
          "imagewidth":512,
          "margin":0,
@@ -562,7 +589,7 @@
         {
          "columns":25,
          "firstgid":3840,
-         "image":"tilesets\/WA_Exterior.png",
+         "image":"..\/..\/tilesets\/WA_Exterior.png",
          "imageheight":1088,
          "imagewidth":800,
          "margin":0,
@@ -575,7 +602,7 @@
         {
          "columns":4,
          "firstgid":4690,
-         "image":"tilesets\/Chicken_Sprite_Sheet_Light_Brown.png",
+         "image":"..\/..\/tilesets\/Chicken_Sprite_Sheet_Light_Brown.png",
          "imageheight":128,
          "imagewidth":128,
          "margin":0,
@@ -698,7 +725,7 @@
         {
          "columns":25,
          "firstgid":4706,
-         "image":"tilesets\/WA_Room_Builder.png",
+         "image":"..\/..\/tilesets\/WA_Room_Builder.png",
          "imageheight":1280,
          "imagewidth":800,
          "margin":0,

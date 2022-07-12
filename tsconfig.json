@@ -30,6 +30,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src"
+    "maps/Map1/src1",
+    "maps/Map2/src2"
   ]
 }

@@ -184,7 +184,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/_\/n301ectmuok\/localhost:3002\/computer_castle.json"
+                 "value":"..\/Map2\/computer_castle.json"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1258,7 +1258,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/lobbyScript.ts"
+         "value":"src1\/lobbyScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",
@@ -1267,7 +1267,7 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"tilesets\/WA_Other_Furniture.png",
+         "image":"..\/..\/tilesets\/WA_Other_Furniture.png",
          "imageheight":416,
          "imagewidth":384,
          "margin":0,
@@ -1280,7 +1280,7 @@
         {
          "columns":10,
          "firstgid":157,
-         "image":"tilesets\/WA_Miscellaneous.png",
+         "image":"..\/..\/tilesets\/WA_Miscellaneous.png",
          "imageheight":352,
          "imagewidth":320,
          "margin":0,
@@ -1293,7 +1293,7 @@
         {
          "columns":25,
          "firstgid":267,
-         "image":"tilesets\/WA_Room_Builder.png",
+         "image":"..\/..\/tilesets\/WA_Room_Builder.png",
          "imageheight":1280,
          "imagewidth":800,
          "margin":0,
@@ -1306,7 +1306,7 @@
         {
          "columns":10,
          "firstgid":1267,
-         "image":"tilesets\/WA_Tables.png",
+         "image":"..\/..\/tilesets\/WA_Tables.png",
          "imageheight":864,
          "imagewidth":320,
          "margin":0,
@@ -1319,7 +1319,7 @@
         {
          "columns":6,
          "firstgid":1537,
-         "image":"tilesets\/WA_Special_Zones.png",
+         "image":"..\/..\/tilesets\/WA_Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
@@ -1351,7 +1351,7 @@
         {
          "columns":13,
          "firstgid":1549,
-         "image":"tilesets\/WA_Seats.png",
+         "image":"..\/..\/tilesets\/WA_Seats.png",
          "imageheight":448,
          "imagewidth":416,
          "margin":0,
@@ -1364,7 +1364,7 @@
         {
          "columns":25,
          "firstgid":1731,
-         "image":"tilesets\/WA_Exterior.png",
+         "image":"..\/..\/tilesets\/WA_Exterior.png",
          "imageheight":1088,
          "imagewidth":800,
          "margin":0,
@@ -1377,7 +1377,7 @@
         {
          "columns":16,
          "firstgid":2581,
-         "image":"tilesets\/rpg_maker_vx__modernrtp_tilea4_by_painhurt_d3f7s8m.png",
+         "image":"..\/..\/tilesets\/rpg_maker_vx__modernrtp_tilea4_by_painhurt_d3f7s8m.png",
          "imageheight":480,
          "imagewidth":512,
          "margin":0,
@@ -1390,7 +1390,7 @@
         {
          "columns":16,
          "firstgid":2821,
-         "image":"tilesets\/cc0ccc6db3b6a4cc8d61cca38a0fe5cb.png",
+         "image":"..\/..\/tilesets\/cc0ccc6db3b6a4cc8d61cca38a0fe5cb.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
@@ -1403,7 +1403,7 @@
         {
          "columns":16,
          "firstgid":3077,
-         "image":"tilesets\/tilesets_fsm_rm2k3_para_vx_ace__set_hospital_by_milkian_darwnhe.png",
+         "image":"..\/..\/tilesets\/tilesets_fsm_rm2k3_para_vx_ace__set_hospital_by_milkian_darwnhe.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
@@ -1416,7 +1416,7 @@
         {
          "columns":32,
          "firstgid":3333,
-         "image":"tilesets\/Terrain_and_Outside.png",
+         "image":"..\/..\/tilesets\/Terrain_and_Outside.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,

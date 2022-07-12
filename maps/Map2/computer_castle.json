@@ -340,6 +340,11 @@
                          "name":"closeLayer",
                          "type":"string",
                          "value":"closed_door"
+                        },
+                        {
+                           "name":"default",
+                           "type":"bool",
+                           "value":false
                         }, 
                         {
                          "name":"door",
@@ -352,10 +357,10 @@
                          "value":"opened_door"
                         }, 
                         {
-                         "name":"readableBy",
-                         "type":"string",
-                         "value":""
-                        }],
+                           "name":"persist",
+                           "type":"bool",
+                           "value":false
+                          }],
                  "rotation":0,
                  "visible":true,
                  "width":0,
@@ -444,7 +449,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src2\/castleScript.ts"
+         "value":"src\/castleScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

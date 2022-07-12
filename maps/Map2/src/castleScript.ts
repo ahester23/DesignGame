@@ -25,7 +25,6 @@ var robotCom = 'Robot commands here.'
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     var hintLevel = 1;
-    apiExtra.initDoors()
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
     WA.room.onEnterLayer('newspaperZone').subscribe(() => {;
@@ -164,6 +163,8 @@ WA.onInit().then(() => {
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     apiExtra.bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
+    }).then(() => {
+        apiExtra.initDoors()
     }).catch(e => console.error(e));
     
     

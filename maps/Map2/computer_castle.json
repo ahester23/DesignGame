@@ -320,7 +320,7 @@
                  "y":4
                 }, 
                 {
-                 "class":"variable",
+                 "type":"variable",
                  "height":0,
                  "id":8,
                  "name":"door",
@@ -439,7 +439,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"maps\/Map2\/src\/castleScript.ts"
+         "value":"src\/castleScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

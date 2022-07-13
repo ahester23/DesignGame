@@ -535,6 +535,12 @@
                  "point":true,
                  "properties":[
                         {
+                         "name":"code",
+                         "type":"string",
+                         "value":"123456"
+
+                        },
+                        {
                          "name":"closeLayer",
                          "type":"string",
                          "value":"timeMachineClose"

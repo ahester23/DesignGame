@@ -186,6 +186,7 @@ WA.onInit().then(() => {
         console.log('Scripting API Extra ready');}).then(() => {
     }).catch(e => console.error(e));
     initDoors(defaultAssetsUrl)
+    
 }).catch(e => console.error(e));
    
 

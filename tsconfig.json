@@ -30,12 +30,7 @@
     "skipLibCheck": true
   },
   "include": [
-<<<<<<< HEAD
     "maps/Map1/src/lobbyscript.js",
     "maps/Map2/src/*"
-=======
-    "maps/Map1/src",
-    "maps/Map2/src"
->>>>>>> parent of 78b7f3b (help)
   ]
 }

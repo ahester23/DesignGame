@@ -3,6 +3,7 @@ console.log('hello world!')
 
 
 import  * as apiExtra from "@workadventure/scripting-api-extra";
+import { initDoors } from "@workadventure/scripting-api-extra";
 
 const defaultAssetsUrl = "https://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist";
 
@@ -11,23 +12,25 @@ console.log('Script started successfully');
 let currentPopup: any = undefined;
 
 // var id = 1
-var hint1 = 'Look around for a place that could contain the time machine.'
-var hint2 = 'You may need to go look inside somewhere to locate the machine.'
-var hint3 = 'Go to the last door.'
+var hint1 = 'Check out the room. There may be some peculiar things in here.'
+var hint2 = 'The time machine is disguised as the type writer. The numerical code is 4 digits long.'
+var hint3 = 'Go to the time machine. Enter 1234.'
 var directions = 'In order to leave this time period you must find the time machine.'
-var introduction = 'With a loud zap, you open your eyes to discover you are no longer in the Pfaff district. Everything around you looks old.'
+var introduction = 'When entering the room you can not help but notice that the place is strange. However, you are conviced that the time machine is in here somewhere.'
 // var robotIntro = 'Hello, bla bla bla. I do all these things.'
 var robotCom = 'Robot commands here.'
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     var hintLevel = 1;
+
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
-    WA.room.onEnterLayer('newspaperZone').subscribe(() => {;
+
+    WA.room.onEnterLayer('tableZone').subscribe(() => {;
         const today = new Date();
         today.setFullYear(1764);
-        currentPopup = WA.ui.openPopup("newspaper","The newspaper is dated " + today.toDateString() + '.',[{
+        currentPopup = WA.ui.openPopup("tablePopup","test",[{
             label: "Close",
             className: "primary",
             callback: (popup) => {
@@ -35,8 +38,9 @@ WA.onInit().then(() => {
             }
         }]);
     })
-    WA.room.onEnterLayer('windowZone').subscribe(() => {
-        currentPopup = WA.ui.openPopup("window"," Looking through the window, you see rows of bookshelves in a dimly lit room.",[{
+
+    WA.room.onEnterLayer('deskZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("deskPopup","test",[{
             label: "Close",
             className: "primary",
             callback: (popup) => {
@@ -44,9 +48,30 @@ WA.onInit().then(() => {
             }
         }])
     })
-    WA.room.onEnterLayer('announcementZone').subscribe(() => {
-            currentPopup = WA.ui.openPopup("announcement","",[{
-                label: "ENTER NOW",
+
+    WA.room.onEnterLayer('benchZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("benchPopup","test",[{
+            label: "Close",
+            className: "primary",
+            callback: (popup) => {
+                popup.close()
+            }
+        }])
+    })
+
+    WA.room.onEnterLayer('boxZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("boxPopup","test",[{
+            label: "Close",
+            className: "primary",
+            callback: (popup) => {
+                popup.close()
+            }
+        }])
+    })
+
+    WA.room.onEnterLayer('timeMachineZone').subscribe(() => {
+            currentPopup = WA.ui.openPopup("timeMachinePopup","",[{
+                label: "test",
                 className: "disabled",
                 callback: () => {
                     // popup.close()
@@ -54,9 +79,11 @@ WA.onInit().then(() => {
             }]);
     })
 
-    WA.room.onLeaveLayer('newspaperZone').subscribe(closePopUp);
-    WA.room.onLeaveLayer('announcementZone').subscribe(closePopUp);
-    WA.room.onLeaveLayer('windowZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('tableZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('deskZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('benchZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('boxZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('timeMachineZone').subscribe(closePopUp);
 
     // WA.chat.sendChatMessage(robotIntro, 'Mr. Robot')
     // console.log('User introduced to Mr. Robot.')
@@ -64,7 +91,7 @@ WA.onInit().then(() => {
     console.log('Riddle introduced to user.')
     WA.chat.sendChatMessage(directions, 'Mr.Robot')
     console.log('Directions sent to user.')
-    WA.chat.sendChatMessage("How can I help you today?", 'Mr.Robot');
+    WA.chat.sendChatMessage("If you need any help let me know.", 'Mr.Robot');
     console.log('Asked user what help they need.');
     WA.chat.onChatMessage((message => {
         console.log('User sent :', message);
@@ -158,8 +185,7 @@ WA.onInit().then(() => {
     apiExtra.bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');}).then(() => {
     }).catch(e => console.error(e));
-   
-
+    initDoors(defaultAssetsUrl)
 }).catch(e => console.error(e));
    
 

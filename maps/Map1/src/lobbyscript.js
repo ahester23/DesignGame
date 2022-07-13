@@ -3,7 +3,7 @@ console.log('hello world!')
 
 
 
-import { bootstrapExtra } from "C:\Users\hester\Documents\GitHub\Pfaff\dist\bootstrap.js";
+import { bootstrapExtra } from "../../../dist/bootstrap";
 
 console.log('Script started successfully');
 

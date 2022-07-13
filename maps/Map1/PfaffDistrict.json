@@ -1258,7 +1258,11 @@
         {
          "name":"script",
          "type":"string",
+<<<<<<< HEAD
          "value":"src\/lobbyscript.js"
+=======
+         "value":"src\/lobbyScript.ts"
+>>>>>>> parent of 78b7f3b (help)
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

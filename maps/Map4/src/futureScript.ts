@@ -191,11 +191,11 @@ WA.onInit().then(() => {
 
 
 
-function closePopUp(){
-    if (currentPopup !== undefined) {
-        currentPopup.close();
-        currentPopup = undefined;
-    }
-}
+// function closePopUp(){
+//     if (currentPopup !== undefined) {
+//         currentPopup.close();
+//         currentPopup = undefined;
+//     }
+// }
 
-export {};
+// export {};

@@ -3,7 +3,7 @@ console.log('hello world!')
 
 
 
-import { bootstrapExtra } from "../../../node_modules/@workadventure/scripting-api-extra/dist/";
+import { bootstrapExtra } from "../../../node_modules/@workadventure/scripting-api-extra/dist/bootstrap";
 
 console.log('Script started successfully');
 

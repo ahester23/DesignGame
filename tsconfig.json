@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./",
+    "outDir": "./dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -29,8 +29,4 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": [
-    "maps/Map1/src/lobbyscript.js",
-    "maps/Map2/src/*"
-  ]
 }

@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { getMapsOptimizers, getMapsScripts } from "wa-map-optimizer-vite";
 
 export default defineConfig({
-    base: "./dist",
+    base: "./",
     build: {
         rollupOptions: {
             input: {

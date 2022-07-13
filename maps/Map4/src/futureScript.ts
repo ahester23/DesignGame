@@ -9,7 +9,7 @@ const defaultAssetsUrl = "https://unpkg.com/@workadventure/scripting-api-extra@1
 
 console.log('Script started successfully');
 
-// let currentPopup: any = undefined;
+let currentPopup: any = undefined;
 
 // var id = 1
 var hint1 = 'Check out the room. There may be some peculiar things in here.'

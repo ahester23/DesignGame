@@ -1,6 +1,6 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
-/// <reference types="@workadventure/scripting-api-extra" />
+
 
 
 

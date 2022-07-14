@@ -1,7 +1,5 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
-/// <reference types="@workadventure/scripting-api-extra" />
-
 
 import "https://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist"
 

@@ -1,7 +1,6 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
 /// <reference types="@workadventure/scripting-api-extra/dist/bootstrap.js" />
-import {bootstrapExtra} from '../../../node_modules/@workadventure/scripting-api-extra/dist/bootstrap.js'
 
 
 console.log('Script started successfully');

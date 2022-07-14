@@ -98,12 +98,17 @@
                 {
                  "name":"autoOpen",
                  "type":"bool",
-                 "value":true
+                 "value":false
                 }, 
                 {
                  "name":"doorVariable",
                  "type":"string",
                  "value":"mainDoor"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"mainDoorZone"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -156,6 +161,11 @@
                  "name":"doorVariable",
                  "type":"string",
                  "value":"timeMachine"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"timeMachineZone"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -494,7 +504,7 @@
                         {
                          "name":"closeLayer",
                          "type":"string",
-                         "value":""
+                         "value":"mainDoorClose"
                         }, 
                         {
                          "name":"default",
@@ -535,12 +545,6 @@
                  "point":true,
                  "properties":[
                         {
-                         "name":"code",
-                         "type":"string",
-                         "value":"123456"
-
-                        },
-                        {
                          "name":"closeLayer",
                          "type":"string",
                          "value":"timeMachineClose"
@@ -563,7 +567,7 @@
                         {
                          "name":"persist",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }, 
                         {
                          "name":"type",
@@ -644,9 +648,15 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":18,
+ "nextlayerid":21,
  "nextobjectid":4,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"script",
+         "type":"string",
+         "value":"src\/futureScript.ts"
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",
  "tileheight":32,
@@ -654,7 +664,7 @@
         {
          "columns":40,
          "firstgid":1,
-         "image":"..\/tilesets\/32x32_DEMO.png",
+         "image":"..\/..\/tilesets\/32x32_DEMO.png",
          "imageheight":832,
          "imagewidth":1280,
          "margin":0,
@@ -1697,7 +1707,7 @@
         {
          "columns":6,
          "firstgid":1041,
-         "image":"..\/tilesets\/WA_Special_Zones.png",
+         "image":"..\/..\/tilesets\/WA_Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,

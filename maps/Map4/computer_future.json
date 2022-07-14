@@ -655,7 +655,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/futureScript.ts"
+         "value":"src\/futureScript.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

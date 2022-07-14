@@ -1,6 +1,7 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
 /// <reference types="@workadventure/scripting-api-extra" />
+
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 const defaultAssetsUrl = "https://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist";
@@ -180,7 +181,7 @@ WA.onInit().then(() => {
 
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
-    apiExtra.bootstrapExtra().then(() => {
+    bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');}).then(() => {
     }).catch(e => console.error(e));
     initDoors(defaultAssetsUrl)

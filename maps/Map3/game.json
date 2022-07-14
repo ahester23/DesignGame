@@ -677,7 +677,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/gameScript.js"
+         "value":"src\/gameScript.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

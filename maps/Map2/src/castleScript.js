@@ -152,10 +152,6 @@ WA.onInit().then(() => {
 
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
-    apiExtra.bootstrapExtra().then(() => {
-        console.log('Scripting API Extra ready');}).then(() => {
-    }).catch(e => console.error(e));
-   
 
 }).catch(e => console.error(e));
    

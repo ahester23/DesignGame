@@ -119,11 +119,7 @@ WA.onInit().then(() => {
             WA.chat.sendChatMessage(robotCom, 'Mr. Robot')
             break
         }
-
     }))
-
-
-
 }).catch(e => console.error(e));
    
 

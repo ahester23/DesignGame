@@ -1,7 +1,7 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
 /// <reference types="@workadventure/scripting-api-extra" />
-import { bootstrapExtra } from "../../../node_modules/@workadventure/scripting-api-extra/dist/init"
+
 
 
 console.log('Script started successfully');
@@ -123,11 +123,7 @@ WA.onInit().then(() => {
     }))
 
 
-    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
-    bootstrapExtra().then(() => {
-        console.log('Scripting API Extra ready');
-    }).catch(e => console.error(e));
-   
+
 }).catch(e => console.error(e));
    
 

@@ -1,7 +1,5 @@
 console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
-
-
 console.log('Script started successfully');
 
 let currentPopup = undefined;

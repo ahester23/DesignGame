@@ -2,7 +2,7 @@ console.log('hello world!')
 /// <reference types="@workadventure/iframe-api-typings" />
 /// <reference types="@workadventure/scripting-api-extra" />
 
-import  * as apiExtra from "https://unpkg.com/@workadventure/scripting-api-extra@^1";
+import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 
 

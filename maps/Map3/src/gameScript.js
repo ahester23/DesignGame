@@ -3,7 +3,7 @@ console.log('hello world!')
 /// <reference types="@workadventure/scripting-api-extra" />
 /// <reference types="mustache" />
 
-import {} from 'https://github.com/workadventure/scripting-api-extra/blob/main/src/init.ts';
+import {bootstrapExtra} from '/@workadventure/scripting-api-extra';
 
 const defaultAssetsUrl = "https://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist";
 

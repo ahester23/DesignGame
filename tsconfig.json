@@ -30,7 +30,10 @@
     "skipLibCheck": true
   },
   "include": [
-    "maps/Map1/src/lobbyscript.js",
-    "maps/Map2/src/*"
+    "maps/Map1/src/*",
+    "maps/Map2/src/*",
+    "maps/Map3/src/*",
+    "maps/Map4/src/*",
+    "node_modules/*"
   ]
 }

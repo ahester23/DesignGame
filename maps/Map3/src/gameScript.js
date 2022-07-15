@@ -25,7 +25,7 @@ WA.onInit().then(() => {
     WA.room.onEnterLayer('tableZone').subscribe(() => {;
         const today = new Date();
         today.setFullYear(1764);
-        currentPopup = WA.ui.openPopup("tablePopup","test",[{
+        currentPopup = WA.ui.openPopup("tablePopup","Someone left their journal on the table. I won't read it because that feels disrespectful.",[{
             label: "Close",
             className: "primary",
             callback: (popup) => {
@@ -35,7 +35,7 @@ WA.onInit().then(() => {
     })
 
     WA.room.onEnterLayer('deskZone').subscribe(() => {
-        currentPopup = WA.ui.openPopup("deskPopup","test",[{
+        currentPopup = WA.ui.openPopup("deskPopup","You see a weapon on the desk. This place doesn't seem very safe, maybe you should hurry in here.",[{
             label: "Close",
             className: "primary",
             callback: (popup) => {
@@ -45,17 +45,7 @@ WA.onInit().then(() => {
     })
 
     WA.room.onEnterLayer('benchZone').subscribe(() => {
-        currentPopup = WA.ui.openPopup("benchPopup","test",[{
-            label: "Close",
-            className: "primary",
-            callback: (popup) => {
-                popup.close()
-            }
-        }])
-    })
-
-    WA.room.onEnterLayer('boxZone').subscribe(() => {
-        currentPopup = WA.ui.openPopup("boxPopup","test",[{
+        currentPopup = WA.ui.openPopup("benchPopup","There is lots of chemicals on this desk. And they definitly do not look like they wold belong to the avereage person.",[{
             label: "Close",
             className: "primary",
             callback: (popup) => {
@@ -65,7 +55,7 @@ WA.onInit().then(() => {
     })
 
     WA.room.onEnterLayer('timeMachineZone').subscribe(() => {
-            currentPopup = WA.ui.openPopup("timeMachinePopup","",[{
+            currentPopup = WA.ui.openPopup("timeMachinePopup","Wait a second, this is the time machine! The paper beside it says that the code is 4 consecutive numbers that have a sum of 10. ",[{
                 label: "test",
                 className: "disabled",
                 callback: () => {

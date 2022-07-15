@@ -7,12 +7,11 @@ const defaultAssetsUrl = "http://unpkg.com/@workadventure/scripting-api-extra@1.
 console.log('Script started successfully');
 
 let currentPopup = undefined;
-
 // var id = 1
-var hint1 = 'Check out the room. There may be some peculiar things in here.'
-var hint2 = 'The time machine is disguised as the type writer. The numerical code is 4 digits long.'
-var hint3 = 'Go to the time machine. Enter 1234.'
-var directions = 'In order to leave this time period you must find the time machine.'
+var hint1 = 'The time machine is disguised as the typewriter.'
+var hint2 = 'The code is the current year, which can be found on the street.'
+var hint3 = 'Enter 1764 into the time Machine.'
+var directions = 'In order to leave this time period you must find the time machine and enter the correct code.'
 var introduction = 'When entering the room you can not help but notice that the place is strange. However, you are conviced that the time machine is in here somewhere.'
 // var robotIntro = 'Hello, bla bla bla. I do all these things.'
 var robotCom = 'Hi, if you need a hint just send a chat containing the word hint. Or if you would like me to resend the directions send a chat containing the word directions.'
@@ -57,8 +56,8 @@ WA.onInit().then(() => {
     })
 
     WA.room.onEnterLayer('timeMachineZone').subscribe(() => {
-            currentPopup = WA.ui.openPopup("timeMachinePopup","Wait a second, this is the time machine! The paper beside it says that the code is 4 consecutive numbers that have a sum of 10. ",[{
-                label: "test",
+            currentPopup = WA.ui.openPopup("timeMachinePopup","The paper in the typewriter says that the code is the current year.",[{
+                label: "close",
                 className: "disabled",
                 callback: () => {
                     // popup.close()
@@ -175,7 +174,6 @@ WA.onInit().then(() => {
     initDoors(defaultAssetsUrl)
 }).catch(e => console.error(e));
    
-
 
 
 function closePopUp(){

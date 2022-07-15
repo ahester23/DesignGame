@@ -36,15 +36,15 @@ WA.onInit().then(() => {
     //     }]);
     // })
 
-    // WA.room.onEnterLayer('deskZone').subscribe(() => {
-    //     currentPopup = WA.ui.openPopup("deskPopup","test",[{
-    //         label: "Close",
-    //         className: "primary",
-    //         callback: (popup) => {
-    //             popup.close()
-    //         }
-    //     }])
-    // })
+    WA.room.onEnterLayer('yearZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("yearPopup","The year is 12454.",[{
+            label: "Close",
+            className: "primary",
+            callback: (popup) => {
+                popup.close()
+            }
+        }])
+    })
 
     // WA.room.onEnterLayer('benchZone').subscribe(() => {
     //     currentPopup = WA.ui.openPopup("benchPopup","test",[{
@@ -76,7 +76,7 @@ WA.onInit().then(() => {
     //         }]);
     // })
 
-    // WA.room.onLeaveLayer('tableZone').subscribe(closePopUp);
+    WA.room.onLeaveLayer('yearZone').subscribe(closePopUp);
     // WA.room.onLeaveLayer('deskZone').subscribe(closePopUp);
     // WA.room.onLeaveLayer('benchZone').subscribe(closePopUp);
     // WA.room.onLeaveLayer('boxZone').subscribe(closePopUp);
@@ -189,11 +189,11 @@ WA.onInit().then(() => {
 
 
 
-// function closePopUp(){
-//     if (currentPopup !== undefined) {
-//         currentPopup.close();
-//         currentPopup = undefined;
-//     }
-// }
+function closePopUp(){
+    if (currentPopup !== undefined) {
+        currentPopup.close();
+        currentPopup = undefined;
+    }
+}
 
 export {};

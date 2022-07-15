@@ -6,10 +6,10 @@ console.log('Script started successfully');
 let currentPopup = undefined;
 
 // var id = 1
-var hint1 = 'Look around for a place that could contain the time machine.'
-var hint2 = 'You may need to go look inside somewhere to locate the machine.'
-var hint3 = 'Go to the last door.'
-var directions = 'In order to leave this time period you must find the time machine.'
+var hint1 = 'The year can be found on the newspaper.'
+var hint2 = 'The time machine is located through the last door.'
+var hint3 = 'Use the year as the passcode for the time machine.'
+var directions = 'Look around for more information about the current time period..'
 var introduction = 'With a loud zap, you open your eyes to discover you are no longer in the Pfaff district. Everything around you looks old.'
 // var robotIntro = 'Hello, bla bla bla. I do all these things.'
 var robotCom = 'Hi, if you need a hint just send a chat containing the word hint. Or if you would like me to resend the directions send a chat containing the word directions.'

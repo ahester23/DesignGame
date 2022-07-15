@@ -1113,7 +1113,7 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "class":"",
+                 "type":"",
                  "height":75.03757380569,
                  "id":20,
                  "name":"clockPopup",
@@ -1122,6 +1122,28 @@
                  "width":99.6383073895149,
                  "x":1316.97714260154,
                  "y":1418.85847199857
+                }, 
+                {
+                 "type":"area",
+                 "height":308,
+                 "id":21,
+                 "name":"jitsiMeetingRoom",
+                 "properties":[
+                        {
+                         "name":"jitsiRoom",
+                         "type":"string",
+                         "value":"MeetingRoom"
+                        }, 
+                        {
+                         "name":"jitsiTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":202.666666666667,
+                 "x":2152,
+                 "y":1026.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1252,7 +1274,7 @@
          "y":0
         }],
  "nextlayerid":39,
- "nextobjectid":21,
+ "nextobjectid":22,
  "orientation":"orthogonal",
  "properties":[
         {

@@ -6,13 +6,13 @@ console.log('Script started successfully');
 let currentPopup = undefined;
 
 // var id = 1
-var hint1 = 'hint1'
-var hint2 = 'hint2'
-var hint3 = 'hint3'
-var directions = 'directions'
-var introduction = 'Welcome to the Pfaff district. '
+var hint1 = 'Look for a computer.'
+var hint2 = 'THe office probably has a computer.'
+var hint3 = 'Go to the office in the computer.'
+var directions = 'There is a strange noise coming from the computer. You should probably go see whats happening.'
+var introduction = 'Welcome to the Pfaff district.'
 var robotIntro = 'Hello, I am Mr. Robot. I am here to assist you today. For each map, I can give you 3 hints.'
-var robotCom = 'Robot commands here.'
+var robotCom = 'Hi, if you need a hint just send a chat containing the word hint. Or if you would like me to resend the directions send a chat containing the word directions.'
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
@@ -40,6 +40,9 @@ WA.onInit().then(() => {
         console.log('User sent :', message);
         var testmessage = message.toLowerCase()
         switch(true) {
+            case testmessage.includes('instructions') || testmessage.includes('directions'):
+                WA.chat.sendChatMessage(directions, 'Mr.Robot')
+                break
             case testmessage.includes('thank you'):
                 WA.chat.sendChatMessage("You are welcome.", "Mr. Robot")
                 break

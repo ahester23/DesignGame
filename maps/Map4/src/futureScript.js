@@ -8,13 +8,13 @@ console.log('Script started successfully');
 // let currentPopup = undefined;
 
 // var id = 1
-var hint1 = 'Check out the room. There may be some peculiar things in here.'
-var hint2 = 'The time machine is disguised as the type writer. The numerical code is 4 digits long.'
-var hint3 = 'Go to the time machine. Enter 1234.'
-var directions = 'In order to leave this time period you must find the time machine.'
-var introduction = 'The time machine malfunctioned and did not send you back to the present.'
+var hint1 = 'Check out the house. I wonder who left their things all over the place.'
+var hint2 = 'The time machine is disguised as the locker. The numerical code is 6 digits long.'
+var hint3 = 'Go to the time machine. Enter 123456.'
+var directions = 'In order to leave this time period, you must find the time machine. Keep in mind, the last time the time machin disapeared it became disguised.'
+var introduction = 'All you see is a flash of light before you awake in a strange deserted area. The time machine malfunctioned and did not send you back to the present. '
 // var robotIntro = 'Hello, bla bla bla. I do all these things.'
-var robotCom = 'Robot commands here.'
+var robotCom = 'Hi, if you need a hint just send a chat containing the word hint. Or if you would like me to resend the directions send a chat containing the word directions.'
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {

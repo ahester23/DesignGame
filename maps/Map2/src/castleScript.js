@@ -12,7 +12,7 @@ var hint3 = 'Go to the last door.'
 var directions = 'In order to leave this time period you must find the time machine.'
 var introduction = 'With a loud zap, you open your eyes to discover you are no longer in the Pfaff district. Everything around you looks old.'
 // var robotIntro = 'Hello, bla bla bla. I do all these things.'
-var robotCom = 'Robot commands here.'
+var robotCom = 'Hi, if you need a hint just send a chat containing the word hint. Or if you would like me to resend the directions send a chat containing the word directions.'
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {

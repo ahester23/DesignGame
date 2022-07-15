@@ -138,8 +138,7 @@ WA.onInit().then(() => {
                     WA.chat.sendChatMessage(hint2, 'Mr Robot');
                     console.log('Second hint given to user.');
                 }
-
-
+                
                 else if (hintLevel == 3){
                     WA.chat.sendChatMessage('Here is your third hint:', 'Mr.Robot');
                     WA.chat.sendChatMessage(hint3, 'Mr Robot');

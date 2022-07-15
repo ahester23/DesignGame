@@ -17,7 +17,7 @@ var robotCom = 'Hello, I can assist you by giving hints or repeating directions.
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    var hintLevel = 1;
+    var hintLevel = 0;
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
@@ -53,11 +53,21 @@ WA.onInit().then(() => {
             case testmessage.includes('instructions'):
                 WA.chat.sendChatMessage(directions, robot)
                 break
-            case testmessage.includes('reprint') && (hintLevel > 3):
-                WA.chat.sendChatMessage(hint1, robot);
-                WA.chat.sendChatMessage(hint2, robot);
-                WA.chat.sendChatMessage(hint3, robot);
-                console.log('All hints reprinted.')
+            case testmessage.includes('reprint'):
+                switch(hintLevel){
+                case (hintLevel > 0):
+                    WA.chat.sendChatMessage(hint1, robot);
+                    console.log('Hint 1 reprinted.')
+                case (hintLevel > 1):
+                    WA.chat.sendChatMessage(hint2, robot);
+                    console.log('Hint 2 reprinted.')
+                case (hintLevel > 2):
+                    WA.chat.sendChatMessage(hint3, robot);
+                    console.log('All hints reprinted.')
+                default:
+
+                }
+                
                 break
 
             case testmessage.includes("none") || testmessage.includes("no"):
@@ -72,7 +82,8 @@ WA.onInit().then(() => {
 
             case testmessage.includes("hint"):
                 console.log('User asked for a hint.');
-                if (hintLevel == 1){
+                if (hintLevel == 0){
+                    hintLevel ++
                     WA.chat.sendChatMessage('Here is your first hint:', robot);
                     WA.chat.sendChatMessage(hint1, robot);
                     console.log('First hint given to user.');

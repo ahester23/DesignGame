@@ -1,7 +1,7 @@
 /// <reference types ="@workadventure/iframe-api-typings" />
 /// <reference types ="@workadventure/scripting-api-extra" />
 
-import {bootstrapExtra} from "../../../node_modules/@workadventure"
+import {bootstrapExtra} from "@workadventure/scripting-api-extra/dist/init"
 const defaultAssetsUrl = "http://unpkg.com/@workadventure/scripting-api-extra@1.3.2/dist";
 
 console.log('Script started successfully');

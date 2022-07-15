@@ -63,7 +63,7 @@ WA.onInit().then(() => {
                     console.log('Hint 2 reprinted.')
                 case (hintLevel > 2):
                     WA.chat.sendChatMessage(hint3, robot);
-                    console.log('All hints reprinted.')
+                    console.log('Hint 3 reprinted.')
                 default:
 
                 }

@@ -30,9 +30,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "maps/Map1/src/lobbyscript.js",
-    "maps/Map2/src/castleScript.js",
-    "maps/Map3/src/gameScript.js",
-    "maps/Map4/src/futureScript.js"
+    "maps/Map1/src/castleScript.js",
+    "maps/Map2/src/gameScript.js",
+    "maps/Map2/src/futureScript.js"
   ]
 }
